@@ -2,50 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre el proyecto</title>
-    <link rel="shortcut icon" href="logoheader.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Imagenes/logoheader.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="logoheader.png" class="logo"></a>
+        <a href="index.html"><img src="./Imagenes/logoheader.png" class="logo" title="Chopin"></a>
         <nav class="navigation">
-            <a href="respuestas.html" class="Paginascontiguas">Preguntas frecuentes</a>
-            <a href="index.html" class="Paginascontiguas">Comprar</a>
-            <a href="login.php"><button class="btnlogin">Iniciar Sesion</button></a>
+            <ul class="navmenu">
+                <li class="navItem"><a href="index.html" class="navlink paginascontiguas">Comprar</a></li>
+                <li class="navItem"><a href="respuestas.html" class="navlink paginascontiguas">Preguntas frecuentes</a></li>
+                <li class="navItem"><a href="login.php"><button class="navlink btnlogin">Iniciar Sesion</button></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="Venta">
-            <img src="Proyectoventa.jpeg" class="productoenventa">
-            <div class="Producto"> 
-                <div class="datos-producto">
-                    <h3 class="Sobreproyecto">Sobre el proyecto - Colorimetro</h3>
-                    <p class="Descripcionproducto">
-                        Este proyecto trata sobre recrear de forma casera un colorimetro con arduino, los elementos que utilizamos fueron los siguientes: Arduino uno, Protoboard, Cables Dupont, Fotoresistencia y un Led azul.
-                        El programa que desarrollamos nos permite detectar colores mediante los valores leidos por la Fotoresistencia, a continuacion se muestra un video de su funcionamiento.
-                    </p>
+        <div class="contenedorpadre">
+            <div class="venta">
+                <img src="./Imagenes/Proyectoventa.webp" class="productoenventa" title="Colorimetro en Arduino">
+                <div class="producto"> 
+                    <div class="datos-producto">
+                        <h3 class="Sobreproyecto">Sobre el proyecto - Colorimetro</h3>
+                        <p class="descripcionproducto">
+                            Este proyecto trata sobre recrear de forma casera un colorimetro con arduino, los elementos que utilizamos fueron los siguientes: Arduino uno, Protoboard, Cables Dupont, Fotoresistencia y un Led azul.
+                            El programa que desarrollamos nos permite detectar colores mediante los valores leidos por la Fotoresistencia, a continuacion se muestra un video de su funcionamiento.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
     </main>
     <footer>
         <div>
-            <div class="Infoempresa">
+            <div class="infoempresa">
                 <div>
-                    <img class="logoempresa" src="logo.png">
+                    <img class="logoempresa" src="./Imagenes/logo.png" title="Chopin logo">
                 </div>
-                <div class="Descripcionempresa"> 
-                    <div class="Textodescripcion">
-                        <p class="Text">Chopin© es una empresa creada el 20/10/2023.</p>
-                        <p class="Text">Creadores: Thiago Martinez, Bruno Rojas, Victor Morales y Alejandro Grageda.</p>
-                        <p class="Text">Año: 3 Division: 7</p>
+                <div class="descripcionempresa"> 
+                    <div>
+                        <p class="text">Chopin© es una empresa creada el 20/10/2023.</p>
+                        <p class="text">Creadores: Thiago Martinez, Bruno Rojas, Victor Morales y Alejandro Grageda.</p>
+                        <p class="text">Año: 3 Division: 7</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/scriptindex.js"></script>
 </body>
 </html>

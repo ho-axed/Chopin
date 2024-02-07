@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="shortcut icon" href="logoheader.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./Imagenes/logoheader.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar - Chopin</title>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="logoheader.png" class="logo"></a>
+        <a href="index.html"><img src="./Imagenes/logoheader.png" class="logo" title="Chopin"></a>
         <nav class="navigation">
-            <a href="Sobreproyecto.html" class="Paginascontiguas">Sobre el proyecto</a>
-            <a href="respuestas.html" class="Paginascontiguas">Preguntas frecuentes</a>
-            <a href="login.php"><button class="btnlogin">Iniciar Sesion</button></a>
+            <ul class="navmenu">
+                <li class="navItem"><a href="Sobreproyecto.html" class="navlink paginascontiguas">Sobre el proyecto</a></li>
+                <li class="navItem"><a href="respuestas.html" class="navlink paginascontiguas">Preguntas frecuentes</a></li>
+                <li class="navItem"><a href="login.php"><button class="navlink btnlogin">Iniciar Sesion</button></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <main>
-        <div class="Objetosnecesarios">
-            <h3>Productos necesarios para armar el colorimetro:</h3>
-            <a href="https://articulo.mercadolibre.com.ar/MLA-1437847642-placa-arduino-uno-r3-atmega328-ch340-iot-atmel-cable-usb-_JM#position=2&search_layout=grid&type=item&tracking_id=3b286011-e0bc-4d79-b681-f958f5623bde" target="_blank"><p>Arduino Uno          $9.990  </p></a>
-            <a href="https://articulo.mercadolibre.com.ar/MLA-901142920-protoboard-breadboard-830-puntos-experimentador-arduino-ptb-_JM#position=1&search_layout=grid&type=item&tracking_id=28e85e22-08f4-4282-a41e-6064d354e985" target="_blank"><p>Protoboard           $2.728  </p></a>
-            <a href="https://articulo.mercadolibre.com.ar/MLA-1382171273-modulo-sensor-de-luz-ldr-fotoresistor-ky-018-arduino-nubbeo-_JM#position=6&search_layout=grid&type=item&tracking_id=8be10285-27a1-486b-93c7-f6ff9769b228" target="_blank"><p>Fotoresistor         $1.031  </p></a>
-            <a href="https://articulo.mercadolibre.com.ar/MLA-1381869301-cable-dupont-20-cables-macho-macho-10cm-_JM#position=3&search_layout=grid&type=item&tracking_id=a1bcb680-898f-4cb3-9330-f59dc2e2b97b" target="_blank"><p>Cables Dupont        $1.650  </p></a>
-            <a href="https://articulo.mercadolibre.com.ar/MLA-763571619-pack-10-resistencias-220-ohm-14w-resistencia-arduino-nubbeo-_JM#position=1&search_layout=grid&type=item&tracking_id=8b0bdc9c-645b-4823-9507-0f46cb57a2f6" target="_blank"><p>Resistencias 200 Ohm $753    </p></a>
-            <a href="https://articulo.mercadolibre.com.ar/MLA-855696246-pack-50-leds-5mm-redondos-diodos-electronica-brillo-_JM?searchVariation=55946073216#searchVariation=55946073216&position=35&search_layout=stack&type=item&tracking_id=33e04eb7-f2d4-405b-9bea-b85ccd6f2b9b" target="_blank"><p>Led azul             $5.999  </p></a>
-            <p>Total                $22.151 </p>
+        <div class="contenedorpadre">
+            <div class="objetosnecesarios">
+                <h3>Productos necesarios para armar el colorimetro:</h3>
+                <a href="https://articulo.mercadolibre.com.ar/MLA-1437847642-placa-arduino-uno-r3-atmega328-ch340-iot-atmel-cable-usb-_JM#position=2&search_layout=grid&type=item&tracking_id=3b286011-e0bc-4d79-b681-f958f5623bde" target="_blank"><p>Arduino Uno          $9.990  </p></a>
+                <a href="https://articulo.mercadolibre.com.ar/MLA-901142920-protoboard-breadboard-830-puntos-experimentador-arduino-ptb-_JM#position=1&search_layout=grid&type=item&tracking_id=28e85e22-08f4-4282-a41e-6064d354e985" target="_blank"><p>Protoboard           $2.728  </p></a>
+                <a href="https://articulo.mercadolibre.com.ar/MLA-1382171273-modulo-sensor-de-luz-ldr-fotoresistor-ky-018-arduino-nubbeo-_JM#position=6&search_layout=grid&type=item&tracking_id=8be10285-27a1-486b-93c7-f6ff9769b228" target="_blank"><p>Fotoresistor         $1.031  </p></a>
+                <a href="https://articulo.mercadolibre.com.ar/MLA-1381869301-cable-dupont-20-cables-macho-macho-10cm-_JM#position=3&search_layout=grid&type=item&tracking_id=a1bcb680-898f-4cb3-9330-f59dc2e2b97b" target="_blank"><p>Cables Dupont        $1.650  </p></a>
+                <a href="https://articulo.mercadolibre.com.ar/MLA-763571619-pack-10-resistencias-220-ohm-14w-resistencia-arduino-nubbeo-_JM#position=1&search_layout=grid&type=item&tracking_id=8b0bdc9c-645b-4823-9507-0f46cb57a2f6" target="_blank"><p>Resistencias 200 Ohm $753    </p></a>
+                <a href="https://articulo.mercadolibre.com.ar/MLA-855696246-pack-50-leds-5mm-redondos-diodos-electronica-brillo-_JM?searchVariation=55946073216#searchVariation=55946073216&position=35&search_layout=stack&type=item&tracking_id=33e04eb7-f2d4-405b-9bea-b85ccd6f2b9b" target="_blank"><p>Led azul             $5.999  </p></a>
+                <p>Total                $22.151 </p>
+            </div>
         </div>
     </main>
     <footer>
         <div>
-            <div class="Infoempresa">
+            <div class="infoempresa">
                 <div>
-                    <img class="logoempresa" src="logo.png">
+                    <img class="logoempresa" src="./Imagenes/logo.png" title="Chopin logo">
                 </div>
-                <div class="Descripcionempresa"> 
-                    <div class="Textodescripcion">
-                        <p class="Text">Chopin© es una empresa ficticia creada el 20/10/2023.</p>
-                        <p class="Text">Creadores: Thiago Martinez, Bruno Rojas, Victor Morales y Alejandro Grageda.</p>
-                        <p class="Text">Año: 3 Division: 7</p>
+                <div class="descripcionempresa"> 
+                    <div>
+                        <p class="text">Chopin© es una empresa ficticia creada el 20/10/2023.</p>
+                        <p class="text">Creadores: Thiago Martinez, Bruno Rojas, Victor Morales y Alejandro Grageda.</p>
+                        <p class="text">Año: 3 Division: 7</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/scriptindex.js"></script>
 </body>
 </html>

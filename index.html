@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="shortcut icon" href="logoheader.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./Imagenes/logoheader.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chopin - Tienda</title>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="logoheader.png" class="logo" alt="Chopin"></a>
+        <a href="index.html"><img src="./Imagenes/logoheader.png" class="logo" alt="Chopin" title="Chopin"></a>
         <nav class="navigation">
-            <a href="Sobreproyecto.html" class="Paginascontiguas">Sobre el proyecto</a>
-            <a href="respuestas.html" class="Paginascontiguas">Preguntas frecuentes</a>
-            <a href="login.php"><button class="btnlogin">Iniciar Sesion</button></a>
+            <ul class="navmenu">
+                <li class="navItem"><a href="Sobreproyecto.html" class="navlink paginascontiguas">Sobre el proyecto</a></li>
+                <li class="navItem"><a href="respuestas.html" class="navlink paginascontiguas">Preguntas frecuentes</a></li>
+                <li class="navItem"><a href="login.php"><button class="navlink btnlogin">Iniciar Sesion</button></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
+        
     </header>
     <main>
-        <div class="Venta">
-            <img src="Proyectoventa.jpeg" class="productoenventa" alt="Colorimetro">
-            <div class="Producto"> 
-                <div class="datos-producto">
-                    <h3 class="Nombreproducto">Colorimetro</h3>
-                    <p class="Descripcionproducto">
-                        Un colorímetro es cualquier herramienta que identifica el color y el matiz para una medida más objetiva del color.
-                        El colorímetro también es un instrumento que permite medir la absorbancia de una disolución en una frecuencia de luz específica. La frecuencia es determinada por el operario del colorímetro. Por eso hace posible descubrir la concentración de un soluto conocido que sea proporcional a la absorción.
-                    </p>
-                    <a href="Comprar.html" target="_blank"><button class="Comprarproducto">Comprar</button></a>
+        <div class="contenedorpadre">
+            <div class="venta">
+                <img src="./Imagenes/Proyectoventa.webp" class="productoenventa" alt="Colorimetro" title="Colorimetro en Arduino">
+                <div class="producto"> 
+                    <div class="datos-producto">
+                        <h3 class="nombreproducto">Colorimetro</h3>
+                        <p class="descripcionproducto">
+                            Un colorímetro es cualquier herramienta que identifica el color y el matiz para una medida más objetiva del color.
+                            El colorímetro también es un instrumento que permite medir la absorbancia de una disolución en una frecuencia de luz específica. La frecuencia es determinada por el operario del colorímetro. Por eso hace posible descubrir la concentración de un soluto conocido que sea proporcional a la absorción.
+                        </p>
+                        <a href="Comprar.html" target="_blank"><button class="comprarproducto">Comprar</button></a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
         <div>
-            <div class="Infoempresa">
+            <div class="infoempresa">
                 <div>
-                    <img class="logoempresa" src="logo.png">
+                    <img class="logoempresa" src="./Imagenes/logo.png" title="Chopin Logo">
                 </div>
-                <div class="Descripcionempresa"> 
-                    <div class="Textodescripcion">
-                        <p class="Text">Chopin© es una empresa ficticia creada el 20/10/2023.</p>
-                        <p class="Text">Creadores: Thiago Martinez, Bruno Rojas, Victor Morales y Alejandro Grageda.</p>
-                        <p class="Text">Año: 3 Division: 7</p>
+                <div class="descripcionempresa"> 
+                    <div>
+                        <p class="text">Chopin© es una empresa ficticia creada el 20/10/2023.</p>
+                        <p class="text">Creadores: Thiago Martinez, Bruno Rojas, Victor Morales y Alejandro Grageda.</p>
+                        <p class="text">Año: 3 Division: 7</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/scriptindex.js"></script>
 </body>
 </html>

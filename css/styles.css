@@ -1,0 +1,511 @@
+* { /*poniendo la fuente y estableciendo el comportamiento de las propiedades de altura y ancho*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { /*configurando el fondo de la pagina*/
+    min-height: 200px;
+    background-image: url(https://wallpaperaccess.com/full/1259258.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+header { /*configurando el tamaño del header, poniendo un padding tanto a los costados como a arriba y abajo*/
+    position: relative;
+    top: 0;
+    left: 0;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+li {
+    list-style: none;
+}
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;   
+    transition: all .3s ease-in-out; 
+    background-color: #fff;
+}
+
+/*ajustando el tamaño del logo*/
+.logo {
+    width: 90px;
+    filter: drop-shadow( 0 1px 1px rgba(132, 39, 207));
+} /*haciendo la animacion de los links para ir a las paginas de preguntas frecuentes y sobre el proyecto*/
+.navigation a {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #8415db;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+.navigation .paginascontiguas:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+} /*poniendo la animacion de iluminar el boton de login*/
+.navigation .btnlogin{
+    width: 230px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #8415db;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.2s;
+}
+.navigation .btnlogin:hover{
+    background: #faf4ff;
+    color: #162938;
+}
+.venta { /*configurando el body, principalmente la zona de donde se mostraria el producto a vender*/
+    display: flex;
+    background: transparent;
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0 80px #450076;
+    margin-top: 110px;
+    margin-bottom: 110px;
+    width: 1200px;
+    border-radius: 15px;
+    border: 1px solid #9925f8;
+    overflow: hidden;
+}
+
+.contenedorpadre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedorpadrelogin {
+    margin: 200px auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datos-producto{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.productoenventa {
+    width: 600px;
+    height: 600px;
+}
+.producto{
+    display: flex;
+    color: #fff;
+}
+.nombreproducto {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 40px 30px;
+}
+.descripcionproducto {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin: 20px 50px 40px;
+    text-wrap: pretty;
+}
+.comprarproducto {
+    width: 180px;
+    height: 48px;
+    background: rgba(132, 39, 207);
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0 24px;
+    color: white;
+    margin-right: 3px;
+    cursor: pointer;
+    font-size: 25px;
+} /*configurando el footer y dandole colores*/
+
+.infoempresa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+}
+.logoempresa{
+    max-width: 250px;
+    filter: drop-shadow( 0 0 0.5px rgb(132, 39, 207));
+}
+.descripcionempresa {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.text {
+    color: #fff;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.Iniciodesesion {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(80px);
+    border-top: 2px solid #bd7aff;
+    border-left: 2px solid #bd7aff;
+    border-bottom: 2px solid #450076;
+    border-right: 2px solid #450076;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+.Iniciodesesion.activo {
+    height: 520px;
+}
+.Iniciodesesion .Formulariologin {
+    width: 100%;
+    padding: 40px;
+}
+.Iniciodesesion .Formulariologin{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.Iniciodesesion.activo .Formulariologin {
+    transition: none;
+    transform: translateX(-400px);
+}
+.Iniciodesesion .Formularioregistrarse{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.Iniciodesesion.activo .Formularioregistrarse{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.Formularioregistrarse h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.Formulariologin h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+.cajadeinputs {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+.cajadeinputs label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+.cajadeinputs input:focus~label,
+.cajadeinputs input:valid~label {
+    top: -5px;
+}
+.cajadeinputs input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.cajadeinputs .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 57px;
+}
+.Recordar-Olvidar{
+    font-size: 17px;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.Recordar-Olvidar label input {
+    accent-color: #450076;
+    margin-right: 3px;
+}
+.Recordar-Olvidar a {
+    color: #fff;
+    text-decoration: none;
+}
+.Recordar-Olvidar a:hover{
+    text-decoration: underline;
+}
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #450076;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.Iniciarsesion-registrarse {
+    margin-right: 500px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.Iniciarsesion-registrarse p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.contenedor-acordeon{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 200px;
+}
+.contenedor-acordeon h2{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+.acordeon{
+    font-size: 25px;
+    background: transparent;
+    backdrop-filter: blur(80px);
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 5);
+    color: #fff;
+}
+.acordeon label{
+    display: block;
+    padding: 20px;
+    font-size: 30px;
+    background: #ad49ff;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: all 700ms ease;
+    margin-top: 2px;
+}
+.acordeon label:hover{
+    background: #9925f8;
+}
+.acordeon .contenido-acordeon{
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 700ms ease;
+}
+.btn-acordeon:checked ~ .contenido-acordeon{
+    max-height: 12000px;
+    padding: 15px 0px;
+}
+.btn-acordeon{
+    display: none;
+}
+.Sobreproyecto {
+    font-size: 40px;
+    margin-bottom: 100px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+.objetosnecesarios {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    backdrop-filter: blur(70px);
+    box-shadow: 0 0 50px rgba(132, 39, 207);
+    border: 1px solid #9925f8;
+    margin: 300px auto;
+    width: 1000px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.objetosnecesarios h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.objetosnecesarios p{
+    font-size: 20px;
+    font-weight: 300;
+}
+.objetosnecesarios a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width:950px) {
+    .logo {
+        width: 60px;
+    }
+    .venta {
+        flex-direction: column;
+        width: 100%;
+        font-size: 1vw;
+    }
+    .productoenventa {
+        width: 100%;
+        border-bottom: 1px solid #9925f8;
+    }
+    .Sobreproyecto {
+        font-size: 5vw;
+        margin-bottom: 30px;
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    .datos-producto {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .navigation .btnlogin {
+        font-size: 15px;
+        width: 120px;
+        height: 55px;
+        margin-left: 10px;
+    }
+    .text {
+        font-size: 4vw;
+        text-wrap: pretty;
+    }
+    .logoempresa {
+        width: 200px;
+    }
+    .productoenventa {
+        height: 50%;
+    }
+    .datos-producto {
+        width: 100%;
+        padding-left: 2px;
+        padding-right: 2px;
+        text-wrap: pretty;
+    }
+    .descripcionproducto {
+        font-size: 4.5vw;
+    }
+    .nombreproducto {
+        font-size: 10vw;
+        margin-bottom: 3px;
+    }
+    header {
+        padding: 20px 30px;
+    }
+    .objetosnecesarios {
+        padding: 10px;
+    }
+    .objetosnecesarios p {
+        font-size: 15px;
+    }
+    .objetosnecesarios h3{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+        text-wrap: pretty;
+    }
+}
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navmenu {
+        position: fixed;
+        left: -100%;
+        top: 110px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #3f006b;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+    }
+    .navItem {
+        margin: 16px 0;
+    }
+    .navmenu.active {
+        left: 0;
+    }
+}
